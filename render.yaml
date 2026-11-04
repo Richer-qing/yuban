@@ -5,6 +5,7 @@ services:
     name: yuban
     runtime: node
     plan: free
+    buildCommand: npm install --omit=dev
     startCommand: node server/index.js
     healthCheckPath: /
     envVars:
