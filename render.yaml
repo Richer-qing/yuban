@@ -5,8 +5,6 @@ services:
     name: yuban
     runtime: node
     plan: free
-    region: singapore
-    buildCommand: ""
     startCommand: node server/index.js
     healthCheckPath: /
     envVars:
