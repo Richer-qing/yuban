@@ -1,0 +1,13 @@
+{
+  "name": "yuban",
+  "version": "1.0.0",
+  "description": "愈伴 · 情绪兜底与 AI 陪伴疗愈平台",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

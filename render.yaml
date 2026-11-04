@@ -1,0 +1,21 @@
+# Render 一键部署配置（Blueprint）
+# 在 Render 控制台选择 New + → Blueprint，指向本仓库即可自动创建服务。
+services:
+  - type: web
+    name: yuban
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: ""
+    startCommand: node server/index.js
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+    # 数据持久化说明：
+    # 免费套餐的磁盘是临时的，重新部署/重启后 SQLite 数据会重置。
+    # 需要长期保存用户数据时，把下面注释打开（磁盘为付费功能，约 $1/月起）：
+    # disk:
+    #   name: yuban-data
+    #   mountPath: /opt/render/project/src/data
+    #   sizeGB: 1
